@@ -14,10 +14,8 @@ with the regulatory requirements of the US Children's Online Privacy
 Protection Act (COPPA) and Nigeria's Data Protection Act (NDPA) of 2023.
 
 The full findings are to be published in the companion articles:
-- *COPPA Versus the Nigeria Data Protection Act: A Comparative Analysis of 
-  Child Data Protection Frameworks*
-- *Network Traffic Analysis of YouTube Kids in Nigeria and the United States: 
-  Empirical Findings on Differential Data Collection Practices*
+- A Comparative Analysis of Child Data Protection Frameworks under COPPA and the Nigeria Data Protection Act
+- An Empirical Comparative Network Traffic Analysis of YouTube Kids in Nigeria and the United States Examining Differential Data Collection Practices
 
 ## Repository Contents
 
@@ -35,9 +33,9 @@ The full findings are to be published in the companion articles:
 
 ## Methodology Summary
 
-All captures were collected on a single **Android Virtual Device (AVD)** 
+All captures were collected on a single Android Virtual Device (AVD) 
 running Android 10 (x86_64) using `tcpdump` deployed via `adb`, ensuring 
-a controlled and reproducible environment. Each session ran for **15 minutes** 
+a controlled and reproducible environment. Each session ran for 15 minutes
 of standard user interaction (browsing, video selection, and playback).
 
 **Nigeria session:** Host machine VPN disabled; traffic resolved through 
@@ -97,12 +95,10 @@ tshark -r capture_NG.pcapng \
   -e dns.qry.name \
   -e tls.handshake.extensions_server_name \
   -Y "dns or tls.handshake.type == 1" \
-  > analysis_NG.txt
-```
+  > analysis_NG.txt```
 
 Repeat substituting `capture_US.pcapng` and `analysis_US.txt` for the 
 US session.
-
 ---
 
 ## Ethical Considerations
@@ -114,25 +110,21 @@ during the experiment. The captures contain only network metadata
 The VPN used in the US session (ProtonVPN) does not log user traffic.
 
 ---
-
 ## Citation
 
 If you use these datasets in your own research, please cite the companion 
 articles:
 
-> [Authors]. (2025). *Network traffic analysis of YouTube Kids in Nigeria 
-> and the United States: Empirical findings on differential data collection 
-> practices*. [Journal Name to be provided once article has been publised].
+> Abdulrahman Tunde Alabelewe, Samson Adeyinka, Muhammad Alameen Yushau (2026). *An Empirical Comparative Network Traffic Analysis of YouTube Kids in Nigeria and the United States Examining Differential Data Collection Practices*. [Journal Name to be provided once article has been publised].
 
-> [Authors]. (2025). *COPPA versus the Nigeria Data Protection Act: A 
-> comparative analysis of child data protection frameworks*. [Journal Name be provided once article has been publised].
+> Abdulrahman Tunde Alabelewe (2026). *A Comparative Analysis of Child Data Protection Frameworks under COPPA and the Nigeria Data Protection Act*. [Journal Name be provided once article has been publised].
 
 ---
 
 ## Licence
-
-The capture files and analysis outputs in this repository are released 
-under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** 
-licence. You are free to share and adapt the material for any purpose, 
+ You are free to share and adapt the material for any purpose, 
 provided appropriate credit is given.# youtube-kids-network-analysis
 Network traffic captures comparing YouTube Kids data collection behaviour in Nigeria vs. the United States — supporting empirical research on COPPA/NDPA regulatory compliance.
+
+Click here to download
+https://drive.google.com/file/d/1jn0FxBoHXK61r5IAdsaQyiuVx8HrhVsP/view?usp=sharing
